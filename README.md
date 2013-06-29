@@ -1,10 +1,10 @@
 Description
 ----
-  "DemandeDoubleCorrection" est un formulaire qui permet de générer une demande de double correction au sein de l'ISI,
-  l'Institut Supérieur d'Informatique de l'Université Tunis El Manar, Ariana, Tunisie.
+  "DemandeDoubleCorrection" est un formulaire qui permet de gÃ©nÃ©rer une demande de double correction au sein de l'ISI,
+  l'Institut SupÃ©rieur d'Informatique de l'UniversitÃ© Tunis El Manar, Ariana, Tunisie.
 
-  La mise en page a été adapté en LaTeX par :
-  M. Moez MAÂMER, M. Med Ali Mortadha DAHMANI, ISI 2013.
+  CrÃ©Ã© en LaTeX par :
+  M. Med Ali Mortadha DAHMANI.
 
 Utilisation
 ---

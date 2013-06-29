@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[left=20mm,right=20mm,top=10mm,bottom=10mm]{geometry}
+\usepackage[left=20mm,right=20mm,top=10mm,bottom=15mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
@@ -10,10 +10,18 @@
 \usepackage{hyperref}
 \usepackage{pslatex}
 \usepackage{fancybox}
+\usepackage{fancyhdr}
 \usepackage{color}
+\usepackage{hyperref}
+\usepackage{marvosym}
+
+\hypersetup{
+      pdfpagemode   = UseNone,
+}
+
 \setcounter{secnumdepth}{0}
 
-\hypersetup{pdfborder={1 1 1}}
+
 \def\LayoutTextField#1#2{\makebox[8em][l]{#1: }\raisebox{-.5ex}{#2}}
 \def\LayoutChoiceField#1#2{\makebox[12em][l]{#1: }#2}
 \renewcommand{\MakeTextField}[2]{{\vbox to #2{\vfill\hbox to #1{\hrulefill}}}}
@@ -21,32 +29,68 @@
 \longline=\textwidth\advance\longline-10em
 
 \begin{document}
-\renewcommand{\thepage}{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\baselinestretch}{1}
+\lhead{}
+\rhead{}
+\cfoot{\small \bf 2 Rue Abou Raihane Bayrouni, 2080 l'Ariana \hspace{5mm} \Telefon ~ 71 706 164 \hspace{5mm} \FAX ~ 71 706 698 \hspace{5mm} \Email~ISI@isim.rnu.tn}
 
-\noindent\begin{Form}
-\begin{minipage}[l]{103mm}
-\begin{flushleft} 
-\includegraphics[width=4cm]{LogoISI}
-\end{flushleft}
+%\noindent\begin{Form}
+%\begin{minipage}[l]{103mm}
+%\begin{flushleft} 
+%\includegraphics[width=4cm]{LogoISI}
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}[r]{7cm}
+%\begin{flushright}
+%\TextField[name=date,width=29mm,height=5mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Ariana, le}
+%\end{flushright}
+%\end{minipage}
+%\vspace{7mm}
+
+\begin{center}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\includegraphics[width=44mm]{LogoISI}
+\end{center}
 \end{minipage}
-\begin{minipage}[r]{7cm}
-\begin{flushright}
-\TextField[name=date,width=29mm,height=5mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Ariana, le}
-\end{flushright}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\includegraphics[width=44mm]{Tn2}
+\end{center}
 \end{minipage}
-\vspace{7mm}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\textcolor{blue}{
+	\footnotesize{
+			\textbf{ 
+			\textsc{République Tunisienne\\
+			Ministère de l'Enseignement Supérieur\\
+			et de la Recherche Scientifique\\
+			Université de Tunis El Manar\\
+			Institut Supérieur d'Informatique\\
+			}
+		}
+	}
+}
+\end{center}
+\end{minipage}
+\end{center}
+
+\vspace*{7mm}
 
 \begin{center}
  \huge{Demande d'une double correction des copies d'examen}
  \end{center}
-\vspace{7mm}
+
+\vspace*{7mm}
 
 \section{Partie réservée à l'étudiant}
-\vspace{5mm}
-\hspace{4.4mm}
 
 \begin{center}
-\TextField[name=num_cin,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Numéro CIN}\vskip1ex
+\TextField[name=num_cin,width=\longline,maxlen=8,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Numéro CIN}\vskip1ex
 \TextField[name=nom,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Nom}\vskip1ex
 \TextField[name=prenom,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Prénom}\vskip1ex
 \TextField[name=niv_etudes,width=86mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Niveau d'étude}
@@ -57,7 +101,7 @@
 \hspace{10mm}
 \TextField[name=salle,width=15mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Salle}\vskip1ex
 \end{center}
-\end{Form}
+%\end{Form}
 
 \vspace{5mm}
 \begin{minipage}[]{200mm}
@@ -162,5 +206,8 @@ Prénom: \dotfill\\
  \vspace*{3mm}
 \end{minipage}}}
 \end{center}
+
+\hspace{100mm} \TextField[name=date,width=35mm,height=5mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Ariana, le}
+
 
 \end{document}
